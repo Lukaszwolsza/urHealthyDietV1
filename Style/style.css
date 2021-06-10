@@ -1,0 +1,1016 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #3867d6;
+    color: white;
+    margin: 0;
+}
+
+.main-title {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+    text-align: center;
+}
+
+.menu {
+    display: none;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.main-title__text {
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.list-item {
+    padding: 1rem 5rem;
+    cursor: pointer;
+    
+}
+.user-info-btn {
+    background-color: #3B3B98;
+    border-radius: 5px;
+}
+.list-item > a {
+    text-decoration: none;
+    color: white;
+}
+.header-title {
+    text-align: center;
+}
+
+
+.bg-image {
+    background-image: url("../imgs/main-backgroud1.jpg");
+    /* filter: blur(0.5rem); */
+    height: 30rem;
+    /* -webkit-filter: blur(0.5rem); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* main {
+    width: 100vw;
+    height: 100vh;
+} */
+
+.bg-text {
+    color: black;
+    font-weight: bold;
+    border-radius: 2.2rem;
+    width: 100%;
+    margin: 1rem auto;
+    /* margin: 2rem auto; */
+}
+
+.bg-text>h1 {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.row {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.steps {
+    color: black;
+    display: block;
+    background-color: #26de81;
+    border-radius: 35px;
+    padding: 1rem;
+    width: 70vw;
+    margin: 1rem auto;
+    max-width: 610px;
+}
+
+.step-icon {
+    width: 2.5rem;
+}
+
+.hglight {
+    border-radius: 2.2rem;
+    border: 1px solid #26de81;
+    background-color: #26de81;
+    color: black;
+
+}
+
+.hglight:hover {
+    box-sizing: initial;
+    border-radius: 2.2rem;
+    border: 1px solid white;
+    background-color: #0fb9b1;
+    color: white;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.offers {
+    width: 100%;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.offer-section {
+    width: 100vw;
+}
+
+.offer-box {
+    width: 85vw;
+    display: inline-block;
+    background-color: #26de81;
+    border-radius: 1rem;
+    vertical-align: middle;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 1rem auto;
+}
+
+.offer-box:hover {
+    box-shadow: 3px 3px 3px 3px rgba(122, 70, 9, 0.746);
+}
+
+.recommended {
+    background-color: #20bf6b;
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
+}
+
+.recommended-highlight {
+    border-radius: 1.5rem;
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 2rem auto;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.meals>h2 {
+    font-size: 2rem;
+}
+
+.list-of-meal {
+    padding: 0;
+}
+
+.list-of-meal>li {
+    width: 100%;
+    display: inline-block;
+    margin-right: 0.65rem;
+    padding: 0;
+    margin: 0 0 0.75rem;
+}
+
+.desc-cost {
+    color: #eb3b5a;
+}
+
+.order-button {
+    padding: 0.5rem;
+    margin: 0 0 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #3867d6;
+    border: none;
+    width: 15rem;
+    border-radius: 1.55rem;
+    font-weight: 700;
+}
+
+.contact {
+    width: 100%;
+    background-color: #3867d6;
+    padding: 1rem 0;
+}
+
+.contact>h1 {
+    text-align: center;
+}
+
+.links {
+    margin: 1rem auto;
+    text-align: center;
+    /* display: inline; */
+}
+
+.link-icon {
+    width: 3rem;
+    margin: 1rem 1rem;
+    display: inline;
+}
+
+.contact>h3 {
+    text-align: center;
+}
+
+.order-button:hover {
+    background-color: white;
+    color: #3867d6;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.mobile-navbar {
+    background: transparent;
+    border: none;
+    width: 4.5rem;
+    vertical-align: middle;
+    float: left;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.mobile-navbar__bar {
+    background-color: black;
+    margin: 1rem 0;
+    border: 1px solid black;
+    display: block;
+    width: 80%;
+}
+
+.mobile-menu {
+    background-color: white;
+    width: 90vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 200;
+    display: none;
+}
+
+.mobile-menu.visible {
+    display: block;
+    animation: fade-slide-in 0.6s ease-out forwards;
+}
+
+
+.mobile-list__icons {
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto;
+    /* vertical-align: middle;
+    margin: 0.5rem auto; */
+}
+
+/* .higher__icon {
+    margin-top: 6rem;
+} */
+
+.mobile-list__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem auto;
+    vertical-align: middle;
+}
+
+.mobile-menu__footer-text {
+    position: absolute;
+    bottom: 3%;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-list:first-of-type {
+    margin-top: 5rem;
+}
+
+.mobile-list-item {
+    display: block;
+    margin: 2.5rem auto;
+    width: 17rem;
+    padding: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.mobile-list {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.highlighted {
+    border: 1px solid #20bf6b;
+    background-color: #20bf6b;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.657);
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+
+.backdrop.visible {
+    display: block;
+}
+
+.mobile-exit__btn {
+    background: transparent;
+    border: none;
+    width: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.contact__header {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contact-form {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-form__inputs {
+    border: none;
+    border-bottom: 3px solid black;
+    width: 80vw;
+    height: 6vh;
+    border-radius: 0.5rem;
+    /* border-radius: 1rem; */
+    background-color: #3498db;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    caret-color: transparent;
+}
+
+.contact-form__textarea {
+    border: none;
+    border-bottom: 3px solid black;
+    width: 90vw;
+    height: 20vh;
+    border-radius: 0.5rem;
+    /* border-radius: 1rem; */
+    background-color: #3498db;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    caret-color: transparent;
+}
+
+::placeholder {
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.contact-form_button {
+    width: 60vw;
+    height: 7vh;
+    border-radius: 2rem;
+    background-color: #27ae60;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+    /* cursor: pointer; */
+}
+
+
+
+.correct-send-form {
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    margin: 2rem auto;
+    background-color: white;
+    z-index: 100;
+    border-radius: 25px;
+    display: none;
+}
+
+.correct-send-form.visible {
+    display: block;
+    animation: fade-slide-up 0.3s ease-in;
+}
+
+.correct-send-form>h3 {
+    margin: 3rem auto;
+
+}
+
+.correct-send-form>button {
+    width: 50vw;
+    background-color: #20bf6b;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.slider-up {
+    height: 2.5rem;
+    width: 3rem;
+    position: fixed;
+    border-radius: 5px;
+    bottom: 2%;
+    right: 4%;
+    background-color: #8e44ad;
+    text-align: center;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+
+.arrow-up {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.selected-offer-alert {
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    margin: 3rem auto;
+    background-color: white;
+    z-index: 100;
+    border-radius: 25px;
+    display: none;
+}
+
+.selected-offer-alert.visible {
+    display: block;
+    animation: fade-slide-up 0.3s ease-in;
+}
+
+.selected-offer-alert>h3 {
+    margin: 2rem auto;
+}
+
+.selected-offer-alert>button {
+    width: 6rem;
+    height: 3.5rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+.selected-offer__confirm {
+    background-color: #20bf6b;
+}
+
+.selected-offer__decline {
+    background-color: #eb3b5a;
+}
+
+.footer-loginpage {
+    background-color: #20bf6b;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.user-logo {
+    width: 3rem;
+    vertical-align: middle;
+    margin: 1rem 0.4rem;
+}
+
+.user-login-form {
+    max-width: 600px;
+    border: none;
+    text-align: center;
+    margin: 3vh auto;
+    width: 88vw;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 17px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 17px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 17px -1px rgba(0, 0, 0, 0.75);
+    transition: 1s;
+}
+
+.login-input {
+    vertical-align: middle;
+    border-radius: 15px;
+    width: 60%;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    margin: 1rem 0.4rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.login-input:focus {
+    background-color: #f1f2f6;
+}
+
+.user-login-form__loginbtn {
+    float: right;
+    margin: 0.5rem 2rem;
+    margin-bottom: 4%;
+    width: 30%;
+    font-size: 1.3rem;
+    padding: 2%;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.user-login-form>hr {
+    width: 80%;
+    margin: 4% auto;
+}
+
+.user-login-form__forgotpass {
+    font-size: 1.2rem;
+    color: #16a085;
+}
+
+.user-login-form__registerbtn {
+    max-width: 350px;
+    margin: 2rem auto;
+    width: 44vw;
+    font-size: 1.3rem;
+    padding: 2%;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.main-title>a {
+    text-decoration: none;
+    color: white;
+}
+
+.mobile-list>a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-title__loginpage {
+    width: 100%;
+    text-align: center;
+}
+
+.main-title__loginpage>a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-loginhref {
+    text-decoration: none;
+    color: white;
+}
+
+/* new user form */
+.new-user-form {
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    margin: 2rem auto;
+    background-color: white;
+    z-index: 100;
+    border-radius: 25px;
+    display: none;
+}
+
+.new-user-form.visible {
+    display: block;
+}
+
+form>label,
+form>input {
+    display: block;
+    width: 70%;
+    margin: 2% auto;
+    margin-top: 1%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+form>label {
+    margin-top: 5%;
+}
+
+form>input {
+    border-radius: 5px;
+    border-bottom: 1px solid black;
+    padding: 1%;
+}
+
+form>input:focus {
+    border: 1px solid #5352ed;
+    background-color: #70a1ff;
+    color: white;
+}
+
+.new-user-form__registerbtn {
+    margin: 5% auto;
+    width: 50%;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #5352ed;
+    color: white;
+    padding: 1.5%;
+}
+
+.agreement-label {
+    display: inline;
+    width: 10%;
+}
+.form-group{
+    margin:1% auto;
+    width:100%;
+}
+.form-group_signinbtn{
+    text-align:center;
+    width:10%;
+    font-size:1.3rem;
+}
+.form-horizontal {
+    width: 100%;
+    text-align: center;
+    margin:5% auto 21%;
+}
+.form-group > label{
+    display:inline-block;
+    vertical-align:middle;
+    width:15%;
+    font-size:2.5rem;
+    text-align:right;
+    margin-right:1%;
+}
+.form-control {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+    font-size: 2.5rem;
+}
+.login-btn{
+    text-decoration:none;
+    color:white;
+}
+
+@media (min-width:700px) {
+    .new-user-form {
+        position: fixed;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vw;
+        margin: 2rem auto;
+        background-color: white;
+        z-index: 100;
+        border-radius: 25px;
+        display: none;
+        max-width: 630px;
+    }
+
+    form>label,
+    form>input {
+        display: block;
+        width: 70%;
+        margin: 2% auto;
+        margin-top: 1%;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    form>label {
+        margin-top: 4%;
+    }
+
+
+    .offer-box {
+        max-width: 710px;
+        display: block;
+    }
+
+    .offer-box>h1 {
+        padding: 2% 0;
+    }
+}
+
+@media (min-width:1100px) {
+    .user-login-form__loginbtn {
+        width: 30%;
+        margin-bottom: 4%;
+    }
+
+    .user-login-form {
+        width: 60vw;
+        margin: 5vh auto;
+        text-align: center;
+        transition: 1s;
+    }
+
+    button,
+    .user-login-form__forgotpass {
+        cursor: pointer;
+    }
+}
+
+@media (min-width:1590px) {
+    .menu {
+        display: none;
+    }
+
+    .main-title {
+        width: 60%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .main-title__text {
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        text-decoration:none;
+        color:white;
+        width:100%;
+    }
+
+    .list-item {
+        padding: 1rem 3rem;
+        margin: 0 2.5rem;
+        cursor: pointer;
+    }
+
+    .list-item:hover {
+        color: #20bf6b;
+    }
+
+    .bg-image {
+        height: 40rem;
+    }
+
+    .bg-text {
+        width: 100%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    .bg-text>h1 {
+        width: 100%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    .row {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .steps {
+        text-align: center;
+        width: 12rem;
+        margin: 1rem;
+        display: inline-block;
+        vertical-align: middle;
+        height: 10rem;
+
+    }
+
+    .offers-section {
+        width: 100%;
+    }
+
+    .offers {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .offers>h1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .offer-box {
+        display: inline-block;
+        width: 25vw;
+        margin: 1rem;
+    }
+
+    .recommended-highlight {
+        width: 80%;
+    }
+
+    .recommended {
+        box-shadow: none;
+        width: 70vh;
+    }
+
+    .links {
+        margin: 1rem auto;
+        text-align: center;
+        /* display: inline; */
+    }
+
+    .link-icon {
+        width: 4rem;
+        margin: 1rem 4rem;
+        display: inline;
+    }
+
+    .contact-form {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .contact-form__inputs {
+        border: none;
+        border-bottom: 3px solid black;
+        width: 30vw;
+        display: block;
+        height: 6vh;
+        border-radius: 0.5rem;
+        /* border-radius: 1rem; */
+        background-color: #3498db;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    .contact-form__textarea {
+        border: none;
+        border-bottom: 3px solid black;
+        width: 40vw;
+        height: 20vh;
+        display: block;
+        border-radius: 0.5rem;
+        /* border-radius: 1rem; */
+        background-color: #3498db;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .contact-form_button {
+        width: 20vw;
+        height: 7vh;
+        border-radius: 2rem;
+        background-color: #27ae60;
+        border: none;
+        display: block;
+        font-size: 1.5rem;
+        color: black;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .contact-form_button:hover {
+        width: 20vw;
+        height: 7vh;
+        border-radius: 2rem;
+        background-color: #2ecc71;
+        border: 2px solid white;
+        display: block;
+        font-size: 1.5rem;
+        color: black;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .correct-send-form>button {
+        cursor: pointer;
+    }
+
+    .selected-offer-alert>h3 {
+        font-size: 2rem;
+    }
+
+    .selected-offer-alert>button {
+        width: 12rem;
+    }
+
+    .selected-offer__confirm:hover {
+        border: 3px solid black;
+        cursor: pointer;
+    }
+
+    .selected-offer__decline:hover {
+        border: 3px solid black;
+        cursor: pointer;
+    }
+
+    .user-login-form {
+        max-width: 70vw;
+        margin: 10vh auto;
+        text-align: center;
+        transition: 1s;
+    }
+
+    .user-login-form__loginbtn {
+        width: 30%;
+        margin-bottom: 4%;
+    }
+
+    .user-login-form>hr {
+        width: 90%;
+        margin: 4% auto;
+    }
+}
+
+@media (min-width:1860px) {
+    .menu {
+        display: inline-block;
+        vertical-align: middle;
+        width: 78vw;
+        text-align: center;
+    }
+
+    .main-title {
+        width: 20vw;
+    }
+
+    .mobile-navbar {
+        display: none;
+    }
+
+    .main-title__loginpage {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
+
+@keyframes fade-slide-in {
+    from {
+        transform: translateX(-15rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* @keyframes fade-slide-out {
+    from {
+        right: 90vw;
+    }
+
+    to {
+        right: 90vw;
+    }
+} */
+
+@keyframes fade-slide-up {
+    0% {
+        top: -50px;
+    }
+
+    100% {
+        top: 0;
+    }
+}

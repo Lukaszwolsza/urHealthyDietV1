@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>urHealthyDiet</title>
+    <link rel="stylesheet" href="~/Style/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/hambuger.png">
+    <script src="js/app.js" defer></script>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+    <div class="backdrop"></div>
+    <div class="correct-send-form">
+        <h3>Success.<br> Your message has been sent, thanks!</h3>
+        <button class="close-alert">CLOSE</button>
+    </div>
+    <div class="selected-offer-alert">
+        <h3>Perfect !<br> Are you sure you want to order this option?</h3>
+        @Html.ActionLink("Yes", "Index", "Home", null, new { @class = "selected-offer__confirmt" })
+        
+        <button class="selected-offer__decline">Cancel</button>
+    </div>
+
+    <header>
+        <h1 class="main-title__text">
+            @Html.ActionLink("urHealthyDiet", "Index", "Home", null, new { @class = "main-title__text" })
+            @*<span class="first-title-part">ur</span><span class="second-title-part">HealtyDiet</span>*@
+        </h1>
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <section>
+        <div class="contact">
+            <div class=" links">
+                <img class="link-icon" src="~/imgs/facebook (1).png">
+                <img class="link-icon" src="~/imgs/instagram.png">
+                <img class="link-icon" src="~/imgs/twitter.png">
+                <img class="link-icon" src="~/imgs/youtube.png">
+            </div>
+
+            <div>
+                Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">
+                    Pixel
+                    perfect
+                </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+        </div>
+    </section>
+    <div class="slider-up">
+        <i class="arrow-up"></i>
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

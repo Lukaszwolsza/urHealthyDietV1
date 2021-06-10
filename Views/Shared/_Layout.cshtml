@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>urHealthyDiet</title>
+    <link rel="stylesheet" href="~/Style/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/hambuger.png">
+    @*<script src="js/app.js" defer></script>*@
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+    <div class="backdrop"></div>
+    <div class="correct-send-form">
+        <h3>Success.<br> Your message has been sent, thanks!</h3>
+        <button class="close-alert">CLOSE</button>
+    </div>
+    <div class="selected-offer-alert">
+        <h3>Perfect !<br> Are you sure you want to order this option?</h3>
+        @Html.ActionLink("Yes", "Index", "Home", null, new { @class = "selected-offer__confirmt" })
+        <button class="selected-offer__decline">Cancel</button>
+    </div>
+    <div class="mobile-menu">
+        <button class="mobile-exit__btn" id="mobileNavExitBtn">x</button>
+        <ul class="mobile-list">
+            <li>@Html.ActionLink("Sing In", "SignIn", "Home")</li>
+
+            <a>
+                <li class="mobile-list-item about-us-btn">About us</li>
+            </a>
+            <a>
+                <li class="mobile-list-item highlighted our-offer-btn">Our Offer</li>
+            </a>
+            <a>
+                <li class="mobile-list-item contact-btn">Contact</li>
+            </a>
+            @if (Session["ID_USER"] != null)
+            {
+                string userLogin = Session["USER_LOGIN"].ToString();
+
+                <li>@Html.ActionLink("Welcome " + userLogin + "!", "InfoAboutAccount", "Logged")</li>
+                @*<a>
+                <li>@Html.ActionLink("Welcome " + userName + "!", "InfoAboutAccount", "Logged")</li>
+                <li class="mobile-list__icons higher__icon login-btn">
+                    Welcome <img class="mobile-list__icon" src="imgs/login.png">
+                </li>
+            </a>*@
+            }
+            else
+            {
+                <li>@Html.ActionLink("Sing In", "SignIn", "Home", new { @class = "mobile-list__icons higher__icon login-btn" })
+                    <img class="mobile-list__icon" src="imgs/login.png">
+                </li>
+            }
+            <!-- <a>
+        <li class="mobile-list__icons">
+            Logout<img class = "mobile-list__icon" src = "imgs/powerbutton.png">
+        </li>
+    </a> -->
+        </ul>
+        <h3 class="mobile-menu__footer-text">Copyrights by Łukasz Wolsza </h3>
+    </div>
+    <header>
+        <div class="main-title">
+            <button id="mobileMenu" class="mobile-navbar">
+                <span class="mobile-navbar__bar"></span>
+                <span class="mobile-navbar__bar"></span>
+                <span class="mobile-navbar__bar"></span>
+            </button>
+            <h1 class="main-title__text">
+                @Html.ActionLink("urHealthyDiet", "Index", "Home", null, new { @class = "main-title__text" })
+                @*<span class="first-title-part">ur</span><span class="second-title-part">HealtyDiet</span>*@
+            </h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <a>
+                    <li class="list-item about-us-btn">About us</li>
+                </a>
+                <a>
+                    <li class="list-item hglight our-offer-btn">Our Offer</li>
+                </a>
+                <a>
+                    <li class="list-item contact-btn">Contact</li>
+                </a>
+                @if (Session["ID_USER"] != null)
+                {
+                    string userLogin = Session["USER_LOGIN"].ToString();
+
+                    <li class="list-item user-info-btn">@Html.ActionLink("Welcome " + userLogin + "!", "InfoAboutAccount", "Logged")</li>
+                }
+                else
+                {
+                    <li>
+                        @Html.ActionLink("Sing In", "SignIn", "Home", null, new { @class = "list-item login-btn" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Sing Up", "SignUp", "Home", null, new { @class = "list-item login-btn" })
+                    </li>
+                    @*<a class="menu-loginhref" href="loginPage.html">
+               <li class="list-item login-btn">Login<img class="mobile-list__icon" src="imgs/login.png"></li>
+            </a>*@
+                }
+
+            </ul>
+        </div>
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <section>
+        <div class="contact">
+            <h2 class="contact__header">Contact us</h2>
+            <div class="contact-form">
+                <input class="contact-form__inputs user-inputs" type="text" placeholder="Name">
+                <input class="contact-form__inputs user-inputs" type="text" placeholder="Email">
+                <input class="contact-form__textarea user-inputs" type="text" placeholder="Message">
+                <button class="contact-form_button">Send</button>
+            </div>
+            <hr>
+            <div class=" links">
+                <img class="link-icon" src="imgs/facebook (1).png">
+                <img class="link-icon" src="imgs/instagram.png">
+                <img class="link-icon" src="imgs/twitter.png">
+                <img class="link-icon" src="imgs/youtube.png">
+            </div>
+
+            <div>
+                Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">
+                    Pixel
+                    perfect
+                </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+        </div>
+    </section>
+    <div class="slider-up">
+        <i class="arrow-up"></i>
+    </div>
+
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

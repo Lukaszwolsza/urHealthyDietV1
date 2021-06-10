@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<main>
+    <div id="changeImage" class="bg-image"></div>
+    <div id="aboutUs" class="bg-text">
+        <h1>How do we work?</h1>
+        <div class="row">
+            <div class="steps">
+                <img class="step-icon" src="imgs/phone.png">
+                <h3>Step 1. Fill the form and order diet that's fits you.</h3>
+            </div>
+            <div class="steps">
+                <img class="step-icon" src="imgs/cooking.png">
+                <h3>Step 2. We prepare your meals, keep it fresh in special container.</h3>
+            </div>
+            <div class="steps">
+                <img class="step-icon" src="imgs/deliver.png">
+                <h3>Step 3. Deliver them in bags at your door.</h3>
+            </div>
+            <div class="steps">
+                <img class="step-icon" src="imgs/eat.png">
+                <h3>Step 4. You eat delicous meals and stick to your calories.</h3>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<section class="offers-section">
+    <div class="offers">
+        <h1>What we offer?</h1>
+        <div class="offer-box">
+            <h1>ONE MONTH</h1>
+            <h2 class="desc-cost">$300 / month</h2>
+            <article class="meals">
+                <h2>Includes:</h2>
+                <ul class="list-of-meal">
+                    <li>Breakfast</li>
+                    <li>Second Breakfast</li>
+                    <li>Dinner</li>
+                    <li>Supper</li>
+                </ul>
+                @Html.ActionLink("Order", "Index", "Logged", null, new { @class = "order-button" })
+            </article>
+        </div>
+        <div class="offer-box recommended">
+            <h1 class="recommended-highlight">RECOMMENDED</h1>
+            <h1>THREE MONTHS</h1>
+            <h2 class="desc-cost">$700 / month</h2>
+            <article class="meals">
+                <h2>Includes:</h2>
+                <ul class="list-of-meal">
+                    <li>Breakfast</li>
+                    <li>Second Breakfast</li>
+                    <li>Dinner</li>
+                    <li>Snack</li>
+                    <li>Supper</li>
+                </ul>
+
+                <button class="order-button">Order !</button>
+            </article>
+        </div>
+        <div class="offer-box">
+            <h1>Third</h1>
+            <h2 class="desc-cost">$3200 / month</h2>
+            <article class="meals">
+                <h2>Includes:</h2>
+                <ul class="list-of-meal">
+                    <li>Breakfast</li>
+                    <li>Second Breakfast</li>
+                    <li>Dinner</li>
+                    <li>Supper</li>
+                </ul>
+                <button class="order-button">Order !</button>
+            </article>
+        </div>
+    </div>
+</section>
