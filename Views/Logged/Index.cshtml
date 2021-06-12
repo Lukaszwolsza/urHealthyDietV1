@@ -1,6 +1,7 @@
 ﻿@model urHealthyDiet.Models.ORDER
 @{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutAuthentication.cshtml";
 }
 <h2>Order new diet !</h2>
 
@@ -13,66 +14,95 @@
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
+<div class="personal-data">
+    <h2>Personal informations</h2>
+
+    <div class="form-group">
+        @Html.HiddenFor(model => model.ID_USER, new { htmlAttributes = new { @Value = Session["ID_USER"].ToString()} })
+    </div>
+
     <div class="form-group">
         @Html.LabelFor(model => model.NAME)
-        @Html.EditorFor(model => model.NAME, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.EditorFor(model => model.NAME, new { maxlength = "50", htmlAttributes = new { @class = "form-control" } })
         <br />
         @Html.ValidationMessageFor(model => model.NAME, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.SURNAME)
-        @Html.EditorFor(model => model.SURNAME, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.EditorFor(model => model.SURNAME, new { maxlength = "50", htmlAttributes = new { @class = "form-control" } })
         <br />
         @Html.ValidationMessageFor(model => model.SURNAME, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.ADDRESS)
-        @Html.EditorFor(model => model.ADDRESS, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.EditorFor(model => model.ADDRESS, new { maxlength = "30", htmlAttributes = new { @class = "form-control" } })
         <br />
         @Html.ValidationMessageFor(model => model.ADDRESS, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.CITY)
-        @Html.EditorFor(model => model.CITY, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.EditorFor(model => model.CITY, new { maxlength = "25", htmlAttributes = new { @class = "form-control" } })
         <br />
         @Html.ValidationMessageFor(model => model.CITY, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.POSTCODE)
-        @Html.EditorFor(model => model.POSTCODE, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.EditorFor(model => model.POSTCODE, new { maxlength = "5", placeholder = "eg. 00100", htmlAttributes = new { @class = "form-control" } })
         <br />
         @Html.ValidationMessageFor(model => model.POSTCODE, "", new { @class = "text-danger" })
     </div>
+</div>
+    <div class="diet-data">
+        <h2>Diet informations</h2>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.DIETNAME)<br />*@
+            <div class="radio-type-diet-select">
+                <img src="~/imgs/vegan.jpg" class="diet-type-img"><br />@Html.RadioButtonFor(model => model.DIETNAME, "Vegan")
+            </div>
+            <div class="radio-type-diet-select">
+                <img src="~/imgs/keto.jpg" class="diet-type-img"><br />@Html.RadioButtonFor(model => model.DIETNAME, "Keto")
+            </div>
+            <div class="radio-type-diet-select">
+                <img src="~/imgs/dukandiet.jpg" class="diet-type-img"><br />@Html.RadioButtonFor(model => model.DIETNAME, "Dukan")
+            </div>
+            <div class="radio-type-diet-select">
+                <img src="~/imgs/foodmap.jpg" class="diet-type-img"><br />@Html.RadioButtonFor(model => model.DIETNAME, "Fodmap")
+            </div>
+            @*@Html.EditorFor(model => model.DIETNAME, new { htmlAttributes = new { @class = "form-control" } })*@
+            <br />
+            @Html.ValidationMessageFor(model => model.DIETNAME, "", new { @class = "text-danger" })
+        </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.DIETNAME)
-        @Html.EditorFor(model => model.DIETNAME, new { htmlAttributes = new { @class = "form-control" } })
-        <br />
-        @Html.ValidationMessageFor(model => model.DIETNAME, "", new { @class = "text-danger" })
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CALORIES)
+            @Html.DropDownListFor(model => model.CALORIES,
+                   new SelectList(new[]
+                   {
+                       new{ Value = "1600", Text = "1600"},
+                       new{ Value = "2000", Text = "2000"},
+                       new{ Value = "2200", Text = "2200"},
+                       new{ Value = "2500", Text = "2500"},
+                   }, "Value", "Text"), new { @class = "form-control" })
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.CALORIES)
-        @Html.EditorFor(model => model.CALORIES, new { htmlAttributes = new { @class = "form-control" } })
-        <br />
-        @Html.ValidationMessageFor(model => model.CALORIES, "", new { @class = "text-danger" })
-    </div>
+            <br />
+            @Html.ValidationMessageFor(model => model.CALORIES, "", new { @class = "text-danger" })
+        </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.CARD_NUM)
-        @Html.EditorFor(model => model.CARD_NUM, new { htmlAttributes = new { @class = "form-control" } })
-        <br />
-        @Html.ValidationMessageFor(model => model.CARD_NUM, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.CARD_NUM)
+            @Html.EditorFor(model => model.CARD_NUM, new { htmlAttributes = new { @class = "form-control" } })
+            <br />
+            @Html.ValidationMessageFor(model => model.CARD_NUM, "", new { @class = "text-danger" })
+        </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Order" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
-}
+    }

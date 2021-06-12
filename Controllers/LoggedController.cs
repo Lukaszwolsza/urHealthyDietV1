@@ -32,12 +32,9 @@ namespace urHealthyDiet.Controllers
             {
                 urHealthyDietBaseEntitiesOrderModel entities = new urHealthyDietBaseEntitiesOrderModel();
                 entities.ORDER.Add(order);
-                entities.SaveChanges();
-
-                return RedirectToAction("Index");
+                entities.SaveChanges();          
             }
-
-            return View();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

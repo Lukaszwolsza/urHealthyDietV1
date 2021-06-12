@@ -7,19 +7,19 @@
         <h1>How do we work?</h1>
         <div class="row">
             <div class="steps">
-                <img class="step-icon" src="imgs/phone.png">
+                <img class="step-icon" src="~/imgs/phone.png">
                 <h3>Step 1. Fill the form and order diet that's fits you.</h3>
             </div>
             <div class="steps">
-                <img class="step-icon" src="imgs/cooking.png">
+                <img class="step-icon" src="~/imgs/cooking.png">
                 <h3>Step 2. We prepare your meals, keep it fresh in special container.</h3>
             </div>
             <div class="steps">
-                <img class="step-icon" src="imgs/deliver.png">
+                <img class="step-icon" src="~/imgs/deliver.png">
                 <h3>Step 3. Deliver them in bags at your door.</h3>
             </div>
             <div class="steps">
-                <img class="step-icon" src="imgs/eat.png">
+                <img class="step-icon" src="~/imgs/eat.png">
                 <h3>Step 4. You eat delicous meals and stick to your calories.</h3>
             </div>
         </div>
@@ -41,7 +41,15 @@
                     <li>Dinner</li>
                     <li>Supper</li>
                 </ul>
-                @Html.ActionLink("Order", "Index", "Logged", null, new { @class = "order-button" })
+                @if (Session["ID_USER"] != null)
+                {
+                    @Html.ActionLink("Order", "Index", "Logged", new { id = Session["ID_USER"] }, new { hidefocus = "hidefocus", @class = "order-btn-a" } )
+                }
+                else
+                {
+                    @Html.ActionLink("Order", "SignUp", "Home", new { id = Session["ID_USER"] }, new { hidefocus = "hidefocus", @class = "order-btn-a" } )
+                }
+
             </article>
         </div>
         <div class="offer-box recommended">
@@ -57,8 +65,14 @@
                     <li>Snack</li>
                     <li>Supper</li>
                 </ul>
-
-                <button class="order-button">Order !</button>
+                @if (Session["ID_USER"] != null)
+                {
+                    @Html.ActionLink("Order", "Index", "Logged", new { id = Session["ID_USER"] }, new { hidefocus = "hidefocus", @class = "order-btn-a" } )
+                }
+                else
+                {
+                    @Html.ActionLink("Order", "SignUp", "Home", new { id = Session["ID_USER"] }, new { hidefocus = "hidefocus", @class = "order-btn-a" })
+                }
             </article>
         </div>
         <div class="offer-box">
@@ -72,7 +86,14 @@
                     <li>Dinner</li>
                     <li>Supper</li>
                 </ul>
-                <button class="order-button">Order !</button>
+                @if (Session["ID_USER"] != null)
+                {
+                    @Html.ActionLink("Order", "Index", "Logged", new { id = Session["ID_USER"] }, new { hidefocus = "hidefocus", @class = "order-btn-a" })
+                }
+                else
+                {
+                    @Html.ActionLink("Order", "SignUp", "Home", new { id = Session["ID_USER"] }, new { hidefocus = "hidefocus", @class = "order-btn-a" })
+                }
             </article>
         </div>
     </div>

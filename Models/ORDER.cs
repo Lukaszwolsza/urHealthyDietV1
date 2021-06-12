@@ -18,26 +18,32 @@ namespace urHealthyDiet.Models
         public int ID_ORDER { get; set; }
         public Nullable<int> ID_USER { get; set; }
 
+        [MaxLength(50)]
         [Display(Name = "Name")]
         [Required(ErrorMessage = "You need to give us your name !")]
         public string NAME { get; set; }
 
+        [MaxLength(50)]
         [Display(Name = "Surname")]
         [Required(ErrorMessage = "You need to give us your surname !")]
         public string SURNAME { get; set; }
 
+        [MaxLength(30)]
         [Display(Name = "Address")]
         [Required(ErrorMessage = "You need to give us your address !")]
         public string ADDRESS { get; set; }
 
+        [MaxLength(25)]
         [Display(Name = "City")]
         [Required(ErrorMessage = "You need to give us your city !")]
         public string CITY { get; set; }
 
+        [MaxLength(5)]
         [Display(Name = "Postcode")]
         [Required(ErrorMessage = "You need to give us your post code !")]
         public string POSTCODE { get; set; }
 
+        [MaxLength(15)]
         [Display(Name = "Dietname")]
         [Required(ErrorMessage = "You need to give us your diet name !")]
         public string DIETNAME { get; set; }
@@ -46,6 +52,7 @@ namespace urHealthyDiet.Models
         [Required(ErrorMessage = "You need to give us calories !")]
         public Nullable<double> CALORIES { get; set; }
 
+        [MaxLength(16)]
         [Display(Name = "Card number")]
         [Required(ErrorMessage = "You need to give us your card number !")]
         public string CARD_NUM { get; set; }

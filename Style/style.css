@@ -24,13 +24,31 @@ header {
 .menu {
     display: none;
 }
-
+.order-btn-a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: 2%;
+    background-color: #3867d6;
+    padding:0.5% 2%;
+}
 li {
     list-style: none;
     display: inline-block;
     font-size: 2rem;
 }
-
+.personal-data{
+    width:80%;
+    border:1px solid black;
+    margin:1% auto;
+    text-align:center;
+}
+.diet-data {
+    width: 80%;
+    border: 1px solid black;
+    margin: 1% auto;
+    text-align: center;
+}
 .main-title__text {
     font-weight: bold;
     vertical-align: middle;
@@ -200,7 +218,10 @@ li {
     border-radius: 1.55rem;
     font-weight: 700;
 }
-
+.order-button>a{
+    text-decoration:none;
+    color:white;
+}
 .contact {
     width: 100%;
     background-color: #3867d6;
@@ -228,8 +249,7 @@ li {
 }
 
 .order-button:hover {
-    background-color: white;
-    color: #3867d6;
+    background-color:cornflowerblue;
     transition-duration: 1s;
     cursor: pointer;
 }
@@ -671,7 +691,7 @@ form>input:focus {
 .form-horizontal {
     width: 100%;
     text-align: center;
-    margin:5% auto 21%;
+    margin:5% auto 3%;
 }
 .form-group > label{
     display:inline-block;
@@ -680,6 +700,17 @@ form>input:focus {
     font-size:2.5rem;
     text-align:right;
     margin-right:1%;
+}
+.radio-type-diet-select{
+    display:inline-block;
+    width:23%;
+}
+.diet-type-img{
+    width:85%;
+    height:auto;
+}
+.radio-type-diet-select > input {
+    display: inline-block;
 }
 .form-control {
     display: inline-block;
