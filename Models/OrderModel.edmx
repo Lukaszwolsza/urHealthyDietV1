@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="urHealthyDietBaseOrderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="urHealthyDietBaseOrderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ORDER">
           <Key>
             <PropertyRef Name="ID_ORDER" />
@@ -19,12 +19,14 @@
           <Property Name="DIETNAME" Type="varchar" MaxLength="15" />
           <Property Name="CALORIES" Type="float" />
           <Property Name="CARD_NUM" Type="varchar" MaxLength="16" />
+          <Property Name="DIET_START" Type="date" />
+          <Property Name="DIET_END" Type="date" />
+          <Property Name="DIET_COST" Type="float" />
         </EntityType>
         <EntityContainer Name="urHealthyDietBaseOrderModelStoreContainer">
           <EntitySet Name="ORDER" EntityType="Self.ORDER" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="urHealthyDietBaseOrderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -42,6 +44,9 @@
           <Property Name="DIETNAME" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="CALORIES" Type="Double" />
           <Property Name="CARD_NUM" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="DIET_START" Type="DateTime" Precision="0" />
+          <Property Name="DIET_END" Type="DateTime" Precision="0" />
+          <Property Name="DIET_COST" Type="Double" />
         </EntityType>
         <EntityContainer Name="urHealthyDietBaseEntitiesOrderModel" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ORDER" EntityType="Self.ORDER" />
@@ -55,6 +60,9 @@
           <EntitySetMapping Name="ORDER">
             <EntityTypeMapping TypeName="urHealthyDietBaseOrderModel.ORDER">
               <MappingFragment StoreEntitySet="ORDER">
+                <ScalarProperty Name="DIET_COST" ColumnName="DIET_COST" />
+                <ScalarProperty Name="DIET_END" ColumnName="DIET_END" />
+                <ScalarProperty Name="DIET_START" ColumnName="DIET_START" />
                 <ScalarProperty Name="ID_ORDER" ColumnName="ID_ORDER" />
                 <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />

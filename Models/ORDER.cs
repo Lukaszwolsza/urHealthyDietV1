@@ -56,5 +56,25 @@ namespace urHealthyDiet.Models
         [Display(Name = "Card number")]
         [Required(ErrorMessage = "You need to give us your card number !")]
         public string CARD_NUM { get; set; }
+
+        [DataType(DataType.Date)]
+        [Display(Name = "Diet start date")]
+        public Nullable<System.DateTime> DIET_START { get; set; }
+
+        [DataType(DataType.Date)]
+        [Display(Name = "Diet end date")]
+        public Nullable<System.DateTime> DIET_END { get; set; }
+
+
+
+        public Nullable<double> DIET_COST { get; set; }
+
+
+        public double Diet_Cost_Calc()
+        {
+
+
+            return dietCost;
+        }
     }
 }

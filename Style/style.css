@@ -486,7 +486,11 @@ li {
     border-radius: 25px;
     display: none;
 }
-
+.header-authentication{
+    text-align:center;
+    margin:2% 0;
+    font-size:2rem;
+}
 .selected-offer-alert.visible {
     display: block;
     animation: fade-slide-up 0.3s ease-in;
@@ -691,7 +695,7 @@ form>input:focus {
 .form-horizontal {
     width: 100%;
     text-align: center;
-    margin:5% auto 3%;
+    margin:3% auto;
 }
 .form-group > label{
     display:inline-block;
